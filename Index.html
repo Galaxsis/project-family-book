@@ -1,0 +1,61 @@
+<html>
+<head>
+<title>My family book</title>
+</head>
+
+<body bgcolor="pink">
+<font face = "Curlz MT" size = 6 color = "brown">
+<center><h1><b>My family Book</b></h1></center>
+</font>
+<Hr color = "brown" size = 2 width = 70%>
+<p></p>
+
+<style>
+    #album
+    {
+        border-style: solid;
+        border-color: blueviolet;
+        border: 2px;
+        padding: 2px;
+    }
+</style>
+
+<center>
+<img src="my fam.jfif" id="album" height = 70%>
+<font face = "Arial" size = 4>
+    <b><p id = "namecaption"></p></b>
+</font>
+    <button type="button" onclick="nextslide()">Open Book</button>
+</center>
+
+<script>
+var i = 0;
+var images = [
+    "my fam.jfif",
+    "Abhinav Gupta.jpg",
+    "Mom.jpg",
+    "Suhani.jpg",
+    "Tani.jpg"
+];
+var names = [
+    "",
+    "Abhinav Gupta",
+    "Preeti Goswami Gupta",
+    "Suhani Gupta" ,
+    "Tanaisha Gupta"
+];
+
+function nextslide()
+{
+if(i == 5)
+  {
+    i=0;
+  }
+document.getElementById("album").src = images[i];
+document.getElementById("namecaption").innerHTML = names[i];
+i++;
+}
+</script>
+
+</body>
+</html>
